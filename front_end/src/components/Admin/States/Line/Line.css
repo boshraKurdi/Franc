@@ -1,0 +1,10 @@
+.line canvas {
+    height: 265px !important;
+    width: 415px !important;
+    font-family: var(--lang);
+}
+
+.line {
+    margin: 100px 0;
+    padding: 10px;
+}

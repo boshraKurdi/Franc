@@ -1,0 +1,37 @@
+.land {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.land button {
+    font-size: 30px;
+    border-radius: 0;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+[data-lang='Arabic'] .btns {
+    justify-content: center;
+}
+
+.land .pic img {
+    width: 400px;
+    height: 400px;
+}
+
+@media screen and (max-width:767px) {
+    .land {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .btns {
+        justify-content: center;
+    }
+}

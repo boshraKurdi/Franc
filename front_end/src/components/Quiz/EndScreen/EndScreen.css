@@ -1,0 +1,27 @@
+/* .EndScreen h1 {
+    color: white;
+} */
+
+.EndScreen {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 11px #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.EndScreen button {
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.EndScreen button:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    border: 1px solid #fff;
+    font-size: 20px;
+}

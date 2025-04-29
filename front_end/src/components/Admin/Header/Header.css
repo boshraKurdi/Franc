@@ -1,0 +1,61 @@
+.admin-brand {
+    color: var(--main-color);
+    margin-top: 10px;
+}
+
+header nav {
+    border-bottom: 1px solid var(--main-color);
+    box-shadow: 0 0 17px 1px var(--main-color);
+}
+
+.toggle:focus {
+    box-shadow: 0 0 0 4px var(--main-color);
+}
+
+.prof {
+    cursor: pointer;
+}
+
+
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+    transition: .3s;
+}
+
+.links .drop {
+    margin: 0;
+}
+
+.links .drop:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+@media (max-width:767px) {
+    .links a {
+        margin: 0;
+    }
+}
+
+.links a:hover {
+    color: var(--main-color);
+}
+
+.links a.active {
+    color: var(--main-color);
+}

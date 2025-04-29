@@ -1,0 +1,31 @@
+.topicsCard {
+    width: 400px;
+
+}
+
+.topicsCard h4 {
+    color: var(--main-color);
+}
+
+.topicsCard button {
+    width: 100px;
+    margin: 0 10px;
+    height: 30px;
+}
+
+.topicsCard .btns-op {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topicsCard button:last-of-type {
+    background-color: rgb(197, 60, 60);
+}
+
+
+
+/* 
+.showCourse .btns button:last-of-type {
+    background-color: rgb(76, 152, 165);
+} */

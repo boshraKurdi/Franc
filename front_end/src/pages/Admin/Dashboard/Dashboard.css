@@ -1,0 +1,16 @@
+.dash {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: calc(100vw - 300px);
+    position: absolute;
+    right: 0;
+    padding: 40px;
+}
+
+[data-lang='Arabic'] .content {
+    right: initial;
+    left: 0;
+}

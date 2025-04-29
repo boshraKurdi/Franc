@@ -1,0 +1,24 @@
+.profile {
+    padding: 100px 0;
+}
+
+.profile .cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 525px; */
+    /* border: 1px solid var(--main-color);
+    border-radius: 10px; */
+    /* padding: 40px; */
+}
+
+.nav-link {
+    color: var(--main-color);
+}
+
+@media screen and (max-width:767px) {
+    .profile .cont {
+        flex-direction: column;
+        height: initial;
+    }
+}

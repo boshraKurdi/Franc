@@ -1,0 +1,103 @@
+.bookShow {
+    padding: 100px 0;
+}
+
+
+
+.bookShow .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.bookShow .right h4 {
+    font-size: 1.5rem;
+    font-size: 30px;
+    text-align: right;
+}
+
+.bookShow .left {
+    width: 300px;
+    height: 100%;
+    margin: 10px;
+}
+
+.bookShow .left .image {
+    width: 100%;
+    box-shadow: 0 0 2px 2px #000;
+    margin-bottom: 20px;
+    height: 100%;
+
+}
+
+.bookShow .btns button {
+    width: 147px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.bookShow .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.bookShow .right,
+.bookShow .left .bottom {
+    padding: 10px;
+
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 2px 2px var(--main-color);
+}
+
+.bookShow .right h2 {
+    color: var(--main-color);
+}
+
+.bookShow .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bookShow .right {
+    width: 587px;
+    height: 100%;
+}
+
+.bookShow .right .det {
+    padding: 0 40px;
+}
+
+@media (min-width:767px) and (max-width:991px) {
+    .bookShow .right {
+        width: 350px;
+
+    }
+
+    .bookShow .right p {
+        width: 250px;
+    }
+
+    .bookShow .left {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .bookShow .cont {
+        flex-direction: column;
+        align-items: center;
+        height: initial;
+    }
+
+    .bookShow .left .image {
+        height: 450px;
+    }
+
+    .bookShow .left {
+        margin-bottom: 20px;
+    }
+}

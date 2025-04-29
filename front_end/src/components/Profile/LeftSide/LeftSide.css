@@ -1,0 +1,334 @@
+/* .leftSide {
+    margin: 0 79px;
+}
+
+.leftSide .btns button {
+    background-color: rgb(214, 37, 37);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width:767px) {
+    /* .leftSide {
+        margin: 0;
+    } */
+
+    /* .leftSide .bottom {
+        margin: 0 40px;
+    }
+}
+
+.leftSide .prog {
+    margin-bottom: 10px;
+}
+
+.leftSide h6 {
+    font-weight: bold;
+}
+
+.leftSide .email {
+    font-family: fantasy;
+} */ 
+
+/* Profile Left Side Styling */
+.leftSide {
+    background: linear-gradient(to bottom, #ffffff, #fcfcff);
+    border-radius: 20px;
+    box-shadow: 0px 12px 28px rgba(149, 157, 165, 0.2);
+    padding: 2.25rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .leftSide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #9b87f5, #8B5CF6, #D946EF);
+    border-radius: 3px;
+  }
+  
+  .leftSide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 35px rgba(149, 157, 165, 0.3);
+  }
+  
+  /* Profile Header */
+  .leftSide h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4f4f4f, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+  }
+  
+  .leftSide .email {
+    color: #8E9196;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    font-style: italic;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 1rem;
+  }
+  
+  /* Progress Section */
+  .prog {
+    background: linear-gradient(135deg, #f9f7fe, #f5f2ff);
+    padding: 1.4rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    border-left: 5px solid #9b87f5;
+    box-shadow: 0 4px 12px rgba(155, 135, 245, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  .pp{
+    width: 30px;
+    height: 30px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eee;
+    box-shadow: 1px 2px 5px #eee;
+  }
+  .prog::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(155, 135, 245, 0.1) 0%, rgba(155, 135, 245, 0) 70%);
+    border-radius: 50%;
+  }
+  
+  .prog p {
+    color: #6E59A5;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .prog p::before {
+    content: "⭐";
+    margin-right: 8px;
+    font-size: 1.1rem;
+  }
+  
+  /* User Stats Section */
+  .top {
+    padding: 0.8rem 0;
+    background: linear-gradient(to bottom, rgba(252, 252, 252, 0.5), rgba(250, 250, 252, 0.8));
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .top h5 {
+    font-size: 1.3rem;
+    color: #4f4f4f;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .top h5:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #9b87f5, #6E59A5);
+    border-radius: 3px;
+    animation: shimmer 2s infinite linear;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+  }
+  
+  .top p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.9rem 0;
+    padding: 0.9rem 1.1rem;
+    background: #ffffff;
+    border-radius: 10px;
+    border-left: 3px solid #8B5CF6;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  }
+  
+  .top p:nth-of-type(1) {
+    border-left-color: #8B5CF6;
+  }
+  
+  .top p:nth-of-type(2) {
+    border-left-color: #D946EF;
+  }
+  
+  .top p:nth-of-type(3) {
+    border-left-color: #F97316;
+  }
+  
+  .top p:nth-of-type(4) {
+    border-left-color: #0EA5E9;
+  }
+  
+  .top p:hover {
+    background: linear-gradient(to right, #fff, #fafafa);
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Button Section */
+  .btns {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btns .p-button {
+    background: linear-gradient(135deg, #4b4852, #333139);
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .btns .p-button:hover {
+    background: linear-gradient(135deg, #333139, #1A1F2C);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btns .p-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .leftSide {
+      padding: 1.75rem;
+      max-width: 100%;
+    }
+    
+    .leftSide h2 {
+      font-size: 1.7rem;
+    }
+    
+    .top p {
+      font-size: 0.9rem;
+      padding: 0.8rem;
+    }
+  
+    .prog {
+      padding: 1.2rem;
+    }
+  }
+  
+  /* Add animation for progress elements */
+  @keyframes progressFill {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  /* For profile image if it exists */
+  .image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.8rem;
+    border: 4px solid #9b87f5;
+    box-shadow: 0 6px 15px rgba(155, 135, 245, 0.3);
+    position: relative;
+  }
+  
+  .image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(155, 135, 245, 0.2), transparent);
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .image:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Override PrimeReact progress bar styles */
+  :root {
+    --progress-bg: #E5DEFF;
+    --progress-fill: linear-gradient(90deg, #9b87f5, #6E59A5);
+  }
+  
+  /* RTL support */
+  [dir="rtl"] .leftSide, 
+  html[lang="ar"] .leftSide {
+    text-align: right;
+  }
+  
+  [dir="rtl"] .top p, 
+  html[lang="ar"] .top p {
+    flex-direction: row-reverse;
+    border-left: none;
+    border-right: 3px solid #8B5CF6;
+  }
+  
+  [dir="rtl"] .top p:nth-of-type(2), 
+  html[lang="ar"] .top p:nth-of-type(2) {
+    border-right-color: #D946EF;
+  }
+  
+  [dir="rtl"] .top p:nth-of-type(3), 
+  html[lang="ar"] .top p:nth-of-type(3) {
+    border-right-color: #F97316;
+  }
+  
+  [dir="rtl"] .top p:nth-of-type(4), 
+  html[lang="ar"] .top p:nth-of-type(4) {
+    border-right-color: #0EA5E9;
+  }
+  
+  [dir="rtl"] .top p:hover, 
+  html[lang="ar"] .top p:hover {
+    transform: translateX(-8px);
+  }
+  
+  [dir="rtl"] .prog, 
+  html[lang="ar"] .prog {
+    border-left: none;
+    border-right: 5px solid #9b87f5;
+  }
+  

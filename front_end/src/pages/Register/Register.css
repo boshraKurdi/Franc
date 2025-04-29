@@ -1,0 +1,31 @@
+.reg {
+    padding: 150px 0;
+
+}
+
+.error {
+    color: rgb(252, 50, 50);
+}
+
+.inp {
+    position: relative;
+}
+
+.reg form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg form input,
+.reg form button {
+    margin-top: 10px;
+}
+
+.reg form button {
+    width: 300px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+}

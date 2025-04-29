@@ -1,0 +1,44 @@
+.certificate {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.certificate .cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate .description {
+    color: gray;
+}
+
+.certificate .logo {
+    width: 157px;
+    position: relative;
+    height: 50px;
+    margin: 0 -38px;
+}
+
+[data-lang="Arabic"] .certificate .logo {
+    margin: 0;
+}
+
+.certificate .box {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid var(--main-color)
+}
+
+.certificate .box h3 {
+    color: var(--main-color);
+}
+
+.certificate .box .title,
+.certificate .box .description {
+    font-family: arabic;
+}
+
+.certificate h1 {
+    font-family: certi;
+}

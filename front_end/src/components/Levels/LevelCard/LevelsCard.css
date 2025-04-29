@@ -1,0 +1,50 @@
+.levelCard h4 {
+    color: #608cf3;
+}
+
+.levelCard p {
+    color: #43454b;
+}
+
+.levelCard.active:hover {
+    background-color: #839be4;
+}
+
+.levelCard.active {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.levelCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    transition: .3s;
+    border: 1px solid var(--main-color);
+    background-color: #c1c8eb;
+}
+
+.levelCard.active p {
+    color: #000;
+}
+
+.levelCard .btns-op {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.levelCard button {
+    width: 80px;
+    margin: 0 10px;
+    height: 30px;
+}
+
+.levelCard button:last-of-type {
+    background-color: rgb(197, 60, 60);
+}
+
+.levelCard.active h4 {
+    color: var(--main-color);
+}

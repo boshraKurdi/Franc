@@ -1,0 +1,15 @@
+.headingTitle {
+    color: var(--main-color);
+    position: relative;
+    margin: 10px 0;
+}
+
+.headingTitle::after {
+    content: "";
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 20px;
+    background-color: #000;
+}

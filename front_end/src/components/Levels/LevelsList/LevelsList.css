@@ -1,0 +1,12 @@
+.levelList {
+    list-style: decimal;
+}
+
+.levelList {
+    padding: 20px;
+    border: 1px solid var(--main-color);
+}
+
+.levelList li {
+    color: var(--main-color);
+}

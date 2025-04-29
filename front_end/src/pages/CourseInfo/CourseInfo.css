@@ -1,0 +1,108 @@
+.showCourse {
+    padding: 100px 0;
+}
+
+.showCourse .btns button {
+    width: 200px;
+    margin: 0 10px;
+    height: 38px;
+}
+
+.showCourse .cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+.showCourse .left {
+    width: 300px;
+}
+
+.showCourse .left .image {
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 0 2px 2px #000;
+    margin-bottom: 20px;
+
+}
+
+.showCourse .btns {
+    margin-bottom: 10px;
+}
+
+.showCourse .btns button {
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.showCourse .btns-ad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.showCourse .btns-ad button {
+    height: 50px;
+    background-color: rgb(76, 165, 76);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.showCourse .btns-ad button i {
+    margin: 0 10px;
+}
+
+
+.showCourse .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.showCourse .right,
+.showCourse .left .bottom {
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    box-shadow: 0 0 2px 2px var(--main-color);
+}
+
+.showCourse .right h2 {
+    color: var(--main-color);
+}
+
+.showCourse .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:767px) and (max-width:991px) {
+    .showCourse .right {
+        width: 350px;
+
+    }
+
+    .showCourse .right p {
+        width: 250px;
+    }
+
+    .showCourse .left {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .showCourse .cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showCourse .left {
+        margin-bottom: 20px;
+    }
+}

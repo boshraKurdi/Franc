@@ -1,0 +1,89 @@
+.profileForm {
+    padding: 100px 0;
+}
+
+.profileForm .form-details {
+    position: relative;
+    top: 70px;
+    text-align: center;
+
+}
+
+.p-dialog-header,
+.p-dialog-content {
+    padding: 20px;
+}
+
+.p-dialog-content span {
+    font-size: 22px;
+    margin: 0 10px;
+
+}
+
+.p-dialog-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.p-dialog-footer button:nth-of-type(1) {
+    color: var(--main-color);
+}
+
+.p-dialog-footer button:nth-of-type(2) {
+    padding: 2px;
+    margin: 0 20px;
+    background-color: var(--main-color);
+}
+
+.inp {
+    position: relative;
+}
+
+.error {
+    color: rgb(252, 50, 50);
+}
+
+.profileForm form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileForm form input,
+.profileForm form button {
+    margin-top: 10px;
+}
+
+.profileForm form button {
+    width: 300px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.profileForm .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.profileForm .btns button {
+    background-color: rgb(214, 37, 37);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width:767px) {
+    .profileForm {
+        margin-top: 20px;
+    }
+
+    .profileForm .form-details {
+        position: relative;
+        top: 0;
+    }
+}

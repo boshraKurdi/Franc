@@ -1,0 +1,16 @@
+.states {
+    padding: 100px;
+}
+
+.states .lines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+@media screen and (max-width:991px) {
+    .states .lines {
+        flex-direction: column;
+    }
+}

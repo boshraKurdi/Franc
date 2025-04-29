@@ -1,0 +1,37 @@
+.login {
+    padding: 150px 0;
+
+}
+
+.inp {
+    position: relative;
+}
+
+.error {
+    color: rgb(252, 50, 50);
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form input,
+.login form button {
+    margin-top: 10px;
+}
+
+.login form button {
+    width: 300px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.login p {
+    text-decoration: underline;
+    cursor: pointer;
+}

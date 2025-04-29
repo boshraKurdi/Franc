@@ -1,0 +1,19 @@
+.quizTest #nextQuestion {
+    width: 200px;
+}
+
+.quizTest {
+    margin: 70px;
+    display: flex
+;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    justify-content: center;
+    padding: 3rem;
+}
+
+
+/* .quizTest h3 {
+    color: #ffffff;
+
+} */

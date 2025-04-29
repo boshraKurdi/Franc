@@ -1,0 +1,7 @@
+.main-btn {
+    border: none;
+    background: var(--main-color);
+    border-radius: 3px;
+    color: #fff;
+    padding: 4px;
+}

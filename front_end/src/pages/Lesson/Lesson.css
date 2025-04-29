@@ -1,0 +1,85 @@
+.showLesson {
+    padding: 100px 0;
+}
+
+.showLesson h1 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.showLesson .audioBtn.active {
+    display: none;
+}
+
+.showLesson .audioBtn+.audio {
+    display: none;
+    box-shadow: 0 0 0px 3px var(--main-color);
+}
+
+.showLesson .audioBtn.active+.audio {
+    display: block;
+}
+
+.showLesson a {
+    text-decoration: underline;
+}
+
+.showLesson h3 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.showLesson table {
+    text-align: center;
+}
+
+.showLesson table button {
+    margin: 10px 0;
+    width: 100px;
+}
+
+.showLesson .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.showLesson .btns button {
+    width: 200px;
+}
+
+.showLesson .btns-ad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.showLesson .btns-ad button {
+    height: 50px;
+    background-color: rgb(76, 165, 76);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.showLesson .btns-ad button i {
+    margin: 0 10px;
+}
+
+.showLesson .btns-op button {
+    width: 80px;
+    margin: 4px 10px;
+    height: 30px;
+}
+
+.showLesson .btns-op button:last-of-type {
+    background-color: rgb(197, 60, 60);
+}
+
+.showLesson.active h4 {
+    color: var(--main-color);
+}

@@ -1,0 +1,15 @@
+.card a {
+    padding: 20px;
+    height: 58px;
+    font-family: var(--lang);
+}
+
+
+.card .p-tabview-selected a {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.card button {
+    height: 55px;
+}
