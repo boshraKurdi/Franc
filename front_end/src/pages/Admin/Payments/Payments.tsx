@@ -156,10 +156,10 @@ function Payments() {
             <Container>
                 <div className='users-page'>
                     <h1>
-                        {language === 'French' ? 'Les livres dans le système' : 'الكتب في النظام'}
+                        {language === 'French' ? 'Les paiments dans le système' : 'المدفوعات في النظام'}
                     </h1>
                     <h3>
-                        {language === 'French' ? 'Opérations sur les livres' : ' التعديلات على الكتب '}
+                        {language === 'French' ? 'Opérations sur les paiments' : ' التعديلات على المدفوعات '}
                     </h3>
 
                     <div className='users-list'>
