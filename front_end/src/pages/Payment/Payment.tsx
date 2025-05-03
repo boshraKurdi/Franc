@@ -1,41 +1,40 @@
-import './Payment.css'
 import { Input } from '@components/index'
+import './Payment.css'
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useAppDispatch, useAppSelector } from '@hooks/app'
 import { Container } from 'react-bootstrap'
 import { useForm, SubmitHandler } from "react-hook-form";
-import Cookie from 'cookie-universal';
 
 import { useNavigate, useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { actAddPayment } from '@store/payment/paymentSlice';
-import actShowBook from '@store/book/act/actShowCourse';
+import toast from 'react-hot-toast';
 const schema = z.object({
-    number: z.string({ required_error: 'required field', invalid_type_error: 'email is required!' }),
-    type: z.string({ required_error: 'required field', invalid_type_error: 'email is required!' }),
-    type_payment: z.string({ required_error: 'required field', invalid_type_error: 'email is required!' }),
-    cvc: z.string({ required_error: 'required field', invalid_type_error: 'password is required!' }).min(8),
+    cvc: z.string({ required_error: 'required field', invalid_type_error: 'cvc is required!' }),
+    type: z.string({ required_error: 'required field', invalid_type_error: 'type is required!' }),
+    type_payment: z.string({ required_error: 'required field', invalid_type_error: 'type payment is required!' }),
+    number: z.string({ required_error: 'required field', invalid_type_error: ' number is required!' }),
+    price: z.string({ required_error: 'required field', invalid_type_error: 'price is required!' }),
 
 });
 
 type Inputs = z.infer<typeof schema>;
 type TUser = {
-    number: number,
-    type_payment: string,
-    type: string,
     cvc: string,
-    book_id: number,
-    price: number
+    type: string,
+    type_payment: string,
+    number: number,
+    price: number,
+    book_id: number
 }
-
 const Payment = () => {
-    const cookie = Cookie()
-    const [number, setNumber] = useState<null | number>(null);
+    const [cvc, setCvc] = useState('');
     const [type, setType] = useState('');
     const [type_payment, setTypePayment] = useState('');
-    const [cvc, setCvc] = useState('');
-    const { book } = useAppSelector(state => state.book)
+    const [price, setPrice] = useState<null | number>(null);
+    const [number, setNumber] = useState<null | number>(null);
+
     const { language } = useAppSelector(state => state.language)
     const navigate = useNavigate()
     const {
@@ -50,16 +49,20 @@ const Payment = () => {
     const indx = parseInt(id as string)
     const dispatch = useAppDispatch();
     const data: TUser = {
-        number: number!,
+        cvc,
+        price: price!,
         type: type,
         type_payment,
-        cvc: cvc,
-        book_id: indx,
-        price: book?.price!
+        number: number!,
+        book_id: indx
     }
-    useEffect(() => {
-        dispatch(actShowBook(indx))
-    }, [])
+    const typeHandler = (e: any) => {
+        setType(e.target.value)
+        console.log(type)
+        console.log("hello")
+
+
+    }
     const onSubmit: SubmitHandler<Inputs> = async () => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -67,60 +70,76 @@ const Payment = () => {
             console.log(data)
             dispatch(actAddPayment(data))
                 .unwrap()
-                .then((res) => {
-                    const token = res.authorisation.token;
-                    cookie.set('token', token);
-                    navigate('/')
+                .then(() => {
+                    toast.success('success!')
                 })
-            setNumber(null)
-            setType('')
-            setCvc('')
+
 
         } catch (error) {
-            // setError("email", {
-            //     message: 'This email is already taken'
-            // })
+            setError("price", {
+                message: 'This price is already taken'
+            })
         }
     }
     return (
         <section className='reg'>
             <Container>
-                <form onSubmit={handleSubmit(onSubmit)}>
-
+                <form onSubmit={handleSubmit(onSubmit)} >
                     <div className="inp">
-                        <Input
-                            reg={register("number")}
-                            onChange={(e) => setNumber(e.target.value)} type='number' placeholder={language === 'French' ? "numéro de téléphone" : "رقم الهاتف"} />
-
+                        <Input reg={register("number")}
+                            onChange={(e) => setNumber(e.target.value)}
+                            type='number' placeholder={language === 'French' ? "numéro de téléphone" : "رقم الهاتف"} />
                         {errors.number && <div className='error'>{errors.number.message}</div>}
-
                     </div>
-
-
                     <div className="inp">
                         <Input
-                            reg={register("cvc")}
-                            onChange={(e) => setCvc(e.target.value)} type={"text"} placeholder={language === 'French' ? "cvc" : "cvc"} />
+                            onChange={(e) => setCvc(e.target.value)}
+                            reg={register("cvc")} type={"text"} placeholder={language === 'French' ? "cvc" : "cvc"} />
                         {errors.cvc && <div className='error'>{errors.cvc.message}</div>}
 
                     </div>
-                    <select onChange={(e) => setType(e.target.value)}>
-                        <option value="buy">{language === "French" ? "acheter" : "شراء"}</option>
-                        <option value="borrow">{language === "French" ? "emprunter" : "استعارة"}</option>
-                    </select>
-                    <select onChange={(e) => setTypePayment(e.target.value)}>
-                        <option value="paybal">{"paybal"}</option>
-                        <option value="bank">{"bank"}</option>
-                    </select>
+                    <div className="inp">
+                        <Input
+                            onChange={(e) => setPrice(e.target.value)}
+                            reg={register("price")} type={"number"} placeholder={language === 'French' ? "prix" : "السعر"} />
+                        {errors.price && <div className='error'>{errors.price.message}</div>}
 
+                    </div>
+
+
+
+                    <div className="inp">
+                        <select
+                            {...register('type')}
+                            onChange={(e) => {
+                                setType(e.target.value)
+                                console.log(type);
+
+                            }}
+                        >
+                            <option
+                                value="">{language === 'French' ? 'type' : "النوع"}</option>
+                            <option
+                                value="buy">{language === 'French' ? 'acheter' : "شراء"}</option><option
+
+
+                                    value="metaphor">{language === 'French' ? 'emprunt' : "استعارة"}</option>
+                        </select>
+                    </div>
+                    <div className="inp">
+                        <Input
+                            onChange={(e) => setTypePayment(e.target.value)}
+                            reg={register("type_payment")} type={"text"} placeholder={language === 'French' ? "Mode de paiement" : "نوع الدفع"} />
+                        {errors.type_payment && <div className='error'>{errors.type_payment.message}</div>}
+
+                    </div>
                     <button
                         disabled={isSubmitting}
                     >
 
                         {language === 'French' && isSubmitting ? "Chargement..." :
                             language === 'Arabic' && isSubmitting ? "جاري التحميل..." :
-                                language === 'French' ? "payer" : "ادفع"}</button>
-
+                                language === 'French' ? "Paiement" : "دفع"}</button>
                 </form>
             </Container>
         </section>

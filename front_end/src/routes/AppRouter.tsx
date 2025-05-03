@@ -64,7 +64,7 @@ function App() {
       element: <SuspendPage> <BookInfo /></SuspendPage>
 
     }
-    , {
+      , {
       path: '/books/:id/show/buy',
       element: <SuspendPage> <Payment /></SuspendPage>
 
@@ -155,7 +155,7 @@ function App() {
     {
 
       path: 'payments',
-      element: <SuspendPage ><Payment /></SuspendPage>,
+      element: <SuspendPage ><Payments /></SuspendPage>,
     }, {
       path: 'profile',
       element: <SuspendPage> <Settings /></SuspendPage>

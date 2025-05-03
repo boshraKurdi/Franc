@@ -46,8 +46,10 @@ const BookInfo = () => {
                         <h2>{language === "French" ? book?.title : book?.title_ar}</h2>
                         <h3>{book?.author}</h3>
                         <p>{language === "French" ? book?.description : book?.description_ar}</p>
-                        <h4>${book?.price}</h4>
-                    </div>
+                        <div className="d-flex justify-content-between mb-4">
+                            <h4>{language === 'French' ? "acheter : " : ": شراء"} ${book?.price}</h4>
+                            <h4>{language === 'French' ? "emprunt : " : ": استعارة"} ${book?.metaphor}</h4>
+                        </div></div>
                     <div onClick={showBuy} className="btns">
                         <Button >{language === "French" ? "acheter"
                             : "شراء"}</Button>
