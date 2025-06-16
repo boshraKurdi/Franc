@@ -13,7 +13,7 @@ const actDashUpdateBook = createAsyncThunk(
             const res = await axios.post<TResponse>(`dashboard/book/update/${form.id}`, form.formData
                 , {
                     headers: {
-                        'Content-Type': 'application/json',
+                       'Content-Type': 'multipart/form-data',
                         Authorization: `Bearer ${cookie.get('token')}`
                     },
                 }

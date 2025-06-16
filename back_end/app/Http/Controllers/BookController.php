@@ -31,7 +31,7 @@ class BookController extends Controller
             'author' => $request->author,
             'metaphor' => $request->metaphor
         ]);
-        if ($request->media) {
+        if ($request->hasFile('media')) {
             $store->addMediaFromRequest('media')->toMediaCollection('books');
         }
         return response()->json(['data' => $store->load('media'), 'message' => 'add books successfully!']);
@@ -59,7 +59,8 @@ class BookController extends Controller
             'author' => $request->author,
             'metaphor' => $request->metaphor
         ]);
-        if ($request->media) {
+        if ($request->hasFile('media')) {
+            $book->clearMediaCollection('books');
             $book->addMediaFromRequest('media')->toMediaCollection('books');
         }
         return response()->json(['data' => $book->load('media'), 'message' => 'update books successfully!']);

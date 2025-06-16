@@ -14,3 +14,4 @@ const SuspendPage = ({ children }: { children: React.ReactNode }) => {
 }
 
 export default SuspendPage
+

@@ -58,7 +58,9 @@ function Edit(props: { userId: number, setUserEdited: () => void }) {
 
         }
     }, [language, book])
-
+    const fileHandler = (e: any) => {
+        setMedia(e.target.files[0]);
+    }
     return (
         <div className='user-view _add-view'>
             <h1>{language === 'French' ? "Informations de base" : "المعلومات الأساسية"}</h1> "
@@ -70,7 +72,7 @@ function Edit(props: { userId: number, setUserEdited: () => void }) {
                         type="file"
                         className='form-control'
                         placeholder='Enter Password'
-                        onChange={e => setMedia(e.target.value)}
+                        onChange={fileHandler}
                     />
 
                 </div>

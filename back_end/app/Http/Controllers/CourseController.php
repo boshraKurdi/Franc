@@ -236,10 +236,11 @@ class CourseController extends Controller
             'description_ar' => $request->description_ar,
             'description' => $request->description
         ]);
-        if ($request->media) {
+        if ($request->hasFile('media')) {
+            $course->clearMediaCollection('courses');
             $course->addMediaFromRequest('media')->toMediaCollection('courses');
         }
-        return response()->json(['data' => $course, 'message' => 'update course successfully!']);
+        return response()->json(['data' => $course->load('media'), 'message' => 'update course successfully!']);
     }
 
     /**

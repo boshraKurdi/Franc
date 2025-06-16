@@ -22,11 +22,11 @@ function Edit({ userId }: { userId: number, setUserEdited: () => void }) {
     const addNewUser = () => {
         const formData = new FormData()
 
-        formData.append('title', title as string)
-        formData.append('description', description as string)
-        formData.append('media', media as string)
-        formData.append('title_ar', title_ar as string)
-        formData.append('description_ar', description_ar as string)
+        formData.append('title', title!)
+        formData.append('description', description!)
+        formData.append('media', media!)
+        formData.append('title_ar', title_ar!)
+        formData.append('description_ar', description_ar!)
         const data = {
             formData,
             id: userId
@@ -50,7 +50,9 @@ function Edit({ userId }: { userId: number, setUserEdited: () => void }) {
 
         }
     }, [language, course])
-
+    const fileHandler = (e: any) => {
+        setMedia(e.target.files[0]);
+    }
     return (
         <div className='user-view _add-view'>
             <h1>{language === 'French' ? "Informations de base" : "المعلومات الأساسية"}</h1> "
@@ -62,7 +64,7 @@ function Edit({ userId }: { userId: number, setUserEdited: () => void }) {
                         type="file"
                         className='form-control'
                         placeholder='Enter Password'
-                        onChange={e => setMedia(e.target.value)}
+                        onChange={fileHandler}
                     />
 
                 </div>
